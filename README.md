@@ -1,6 +1,8 @@
-# AngularTourOfHeroes
+# YimAngularTourOfHeroes
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.1.
+
+I(Yim) made some customization to make better understanding about Angular. It is a good start for Angular Beginner
 
 ## Development server
 
