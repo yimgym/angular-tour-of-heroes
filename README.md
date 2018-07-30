@@ -8,6 +8,8 @@ Update from GIT Web directly to test pull.
 
 Update from Eclipse Local Repository to test pull with conflict. 
 
+Created a new branch : 0.0.1 from GitHub Web
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
