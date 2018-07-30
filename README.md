@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 I(Yim) made some customization to make better understanding about Angular. It is a good start for Angular Beginner
 
-Update from Eclipse Local Repository to test pull with conflict.
+Update from Eclipse Local Repository to test pull with conflict. 
 
 ## Development server
 
