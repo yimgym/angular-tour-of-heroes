@@ -1,0 +1,73 @@
+ heroes works! {{hero}}
+<!--  THIS SHOW [object OBJECT] -->
+<h2>{{hero.name|uppercase}} Details</h2>
+<div>
+	<span>id: </span>{{hero.id}}
+</div>
+<div>
+	<span>name: </span>{{hero.name}}
+</div>
+<div>
+	<label>name: <input [(ngModel)]="hero.name" placeholder="name">
+		<!-- ngModel requires  FormsModule at app.module.ts -->
+	</label> <br /> <br />
+	<div *ngIf="selectedHero">
+
+		<h2>{{selectedHero.name | uppercase}} is my selected hero</h2>
+		<div>
+			<span>id: </span>{{selectedHero.id}}
+		</div>
+		<div>
+			<label>name: <input [(ngModel)]="selectedHero.name"
+				placeholder="name">
+			</label>
+		</div>
+	</div>
+	<h2>My Heroes from Mock Data in heroes.component.ts. Click to see
+		effect of simply content display</h2>
+	<ul class="heroes">
+		<li *ngFor="let hero_i of heroes" (click)="onSelect(hero_i)"
+			[class.selected]="hero_i === selectedHero"><span class="badge">{{hero_i.id}}</span>
+			{{hero_i.name}}</li>
+	</ul>
+
+	<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+	<h2>My Heroes from Mock Data in heroes.service.ts. Click to see
+		effect of routing</h2>
+	<ul class="heroes">
+		<li *ngFor="let hero_i of heroes2"><a
+			routerLink="/detail/{{hero_i.id}}"> <span class="badge">{{hero_i.id}}</span>
+				{{hero_i.name}}
+		</a></li>
+	</ul>
+
+	<h2>My Heroes from Observable Mock Data in heroes.service.ts</h2>
+	<ul class="heroes">
+		<li *ngFor="let hero_i of observableHeroes"
+			(click)="onSelect2(hero_i)"><span class="badge">{{hero_i.id}}</span>
+			{{hero_i.name}}</li>
+	</ul>
+
+	<h2>My Heroes from Http (In-memory-data) in heroes.service.ts.
+		Click to see effect of routing</h2>
+	<ul class="heroes">
+		<li *ngFor="let hero_i of httpHeroes" (click)="onSelect3(hero_i)">
+			<span class="badge">{{hero_i.id}}</span> {{hero_i.name}} <input
+			[(ngModel)]="hero_i.name" placeholder="name">
+			<button (click)="save(hero_i)">save</button>
+			<button class="delete" title="delete hero" (click)="delete(hero_i)">x</button>
+		</li>
+	</ul>
+	<div>
+		<h1>Add new hero</h1>
+		<label>Hero name: <input #heroName />
+		</label>
+		<!-- (click) passes input value to add() and then clears the input -->
+		<button (click)="add(heroName.value); heroName.value=''">add
+		</button>
+	</div>
+
+	<app-hero-search></app-hero-search>
+</div>
+

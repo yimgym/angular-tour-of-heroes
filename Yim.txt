@@ -1,0 +1,17 @@
+https://angular.io/tutorial
+
+npm adduser
+yimgym/yim0Npm
+
+npm login
+
+https://www.npmjs.com/~yimgym
+https://www.npmjs.com/package/yim-angular-tour-of-heroes
+
+npm publish
+npm i yim-angular-tour-of-heroes
+npm install yim-angular-tour-of-heroes --save-dev
+npm update --all
+
+ng build 
+//build and pack into ready to use package "dist" folder
