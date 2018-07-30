@@ -10,8 +10,9 @@ https://www.npmjs.com/package/yim-angular-tour-of-heroes
 
 npm publish
 npm i yim-angular-tour-of-heroes
-npm install yim-angular-tour-of-heroes --save-dev
 npm update --all
 
 ng build 
 //build and pack into ready to use package "dist" folder
+
+https://github.com/yimgym/angular-tour-of-heroes
